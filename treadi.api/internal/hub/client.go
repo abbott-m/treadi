@@ -1,7 +1,7 @@
 package hub
 
 import (
-	"bytes"
+	"encoding/json"
 	"log"
 	"time"
 
@@ -83,7 +83,7 @@ func (c *Client) Read() {
 		case "message_sent":
 		}
 
-		c.hub.broadcast <- message
+		// c.hub.broadcast <- message
 	}
 }
 
